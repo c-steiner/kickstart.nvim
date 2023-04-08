@@ -136,6 +136,7 @@ require('lazy').setup({
       },
       sections = {
         lualine_c = {
+          {'buffers', mode = 4},
           {'filename', path = 1}
         }
       }
