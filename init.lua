@@ -44,6 +44,7 @@ vim.g.maplocalleader = ' '
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.cursorline = true
+vim.opt.shell = '/bin/zsh'
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -249,6 +250,11 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Remap terminal behavior
+vim.cmd([[
+  tnoremap <Esc> <C-\><C-n>
+]])
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
