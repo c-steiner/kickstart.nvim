@@ -89,6 +89,11 @@ require('lazy').setup({
     end,
   },
 
+  -- toggleterm
+  {
+    {'akinsho/toggleterm.nvim', version = "*", config = true}
+  },
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
@@ -269,6 +274,9 @@ vim.cmd([[
 
 -- Nvim-Tree mappings
 vim.keymap.set ('n', '<leader>ft', ":NvimTreeToggle<cr>", {silent = true, noremap = true})
+
+-- gitui & toggleterm
+vim.keymap.set('n', '<leader>gz', require('utils.term').git_client_toggle, { desc = 'Git TUI' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
