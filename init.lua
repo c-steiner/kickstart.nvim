@@ -276,7 +276,7 @@ vim.cmd([[
 vim.keymap.set ('n', '<leader>ft', ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 
 -- gitui & toggleterm
-vim.keymap.set('n', '<leader>gz', require('utils.term').git_client_toggle, { desc = 'Git TUI' })
+vim.keymap.set('n', '<leader>gt', require('utils.term').git_client_toggle, { desc = 'Git TUI' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
