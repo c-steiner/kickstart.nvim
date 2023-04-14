@@ -45,6 +45,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.cursorline = true
 vim.opt.shell = '/bin/zsh'
+vim.g.nightflyWinSeparator = 2
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -214,11 +215,21 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+  --{ -- Theme inspired by Atom
+  --  'navarasu/onedark.nvim',
+  --  priority = 1000,
+  --  config = function()
+  --    vim.cmd.colorscheme 'onedark'
+  --  end,
+  --},
+
+  {
+    "bluz71/vim-nightfly-colors",
+    name = "nightfly",
+    lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'nightfly'
     end,
   },
 
@@ -228,7 +239,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'nightfly',
         component_separators = '|',
         section_separators = '',
       },
