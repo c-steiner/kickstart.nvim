@@ -367,6 +367,9 @@ vim.cmd([[
 -- Nvim-Tree mappings
 vim.keymap.set ('n', '<leader>ft', ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 
+-- toggleterm
+vim.keymap.set ('n', '<leader>tt', ":ToggleTerm<cr>", {silent = true, noremap = true})
+
 -- gitui & toggleterm
 vim.keymap.set('n', '<leader>gt', require('utils.term').git_client_toggle, { desc = 'Git TUI' })
 
