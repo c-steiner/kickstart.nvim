@@ -98,6 +98,9 @@ require('lazy').setup({
     {'akinsho/toggleterm.nvim', version = "*", config = true}
   },
 
+  -- Additional syntax files
+  'ron-rs/ron.vim',
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
