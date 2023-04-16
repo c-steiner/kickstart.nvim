@@ -66,7 +66,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- nvim-tree key mappings.
-local function on_attach(bufnr)
+local function nt_on_attach(bufnr)
   local api = require('nvim-tree.api')
 
   local function opts(desc)
@@ -162,7 +162,7 @@ require('lazy').setup({
     },
     config = function()
       require('nvim-tree').setup ({
-        on_attach = on_attach,
+        on_attach = nt_on_attach,
         filters = {
           custom = { ".git" }
         },
