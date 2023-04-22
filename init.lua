@@ -83,9 +83,6 @@ require('lazy').setup({
   --'tpope/vim-sleuth',
 
 
-  -- Additional syntax files
-  'ron-rs/ron.vim',
-
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
@@ -125,21 +122,11 @@ require('lazy').setup({
     },
   },
 
-  --{ -- Theme inspired by Atom
-  --  'navarasu/onedark.nvim',
-  --  priority = 1000,
-  --  config = function()
-  --    vim.cmd.colorscheme 'onedark'
-  --  end,
-  --},
-
-  {
-    "bluz71/vim-nightfly-colors",
-    name = "nightfly",
-    lazy = false,
+  { -- Theme inspired by Atom
+    'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'nightfly'
+      vim.cmd.colorscheme 'onedark'
     end,
   },
 
