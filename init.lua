@@ -129,16 +129,10 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'nightfly',
+        theme = 'onedark',
         component_separators = '|',
         section_separators = '',
       },
-      sections = {
-        lualine_c = {
-          {'buffers', mode = 4},
-          {'filename', path = 1}
-        }
-      }
     },
   },
 
