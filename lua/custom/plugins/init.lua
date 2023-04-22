@@ -9,6 +9,7 @@ vim.opt.shiftwidth = 4
 vim.opt.cursorline = true
 vim.opt.shell = '/bin/zsh'
 vim.g.nightflyWinSeparator = 2
+vim.opt.cp = false
 
 return {
 	-- Additional theme
