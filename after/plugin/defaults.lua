@@ -2,6 +2,11 @@
 -- Telescope buffer search
 vim.keymap.set('n', '<leader>sb', require('telescope.builtin').buffers, { desc = '[S]earch [B]uffers' })
 
+-- Remap terminal behavior
+vim.cmd([[
+  tnoremap <Esc> <C-\><C-n>
+]])
+
 -- toggleterm
 vim.keymap.set ('n', '<leader>tt', ":ToggleTerm<cr>", {silent = true, noremap = true})
 
