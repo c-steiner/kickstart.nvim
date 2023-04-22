@@ -83,11 +83,6 @@ require('lazy').setup({
   --'tpope/vim-sleuth',
 
 
-  -- toggleterm
-  {
-    {'akinsho/toggleterm.nvim', version = "*", config = true}
-  },
-
   -- Additional syntax files
   'ron-rs/ron.vim',
 
