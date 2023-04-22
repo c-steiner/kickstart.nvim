@@ -248,15 +248,6 @@ vim.cmd([[
   tnoremap <Esc> <C-\><C-n>
 ]])
 
--- Nvim-Tree mappings
-vim.keymap.set ('n', '<leader>ft', ":NvimTreeToggle<cr>", {silent = true, noremap = true})
-
--- toggleterm
-vim.keymap.set ('n', '<leader>tt', ":ToggleTerm<cr>", {silent = true, noremap = true})
-
--- gitui & toggleterm
-vim.keymap.set('n', '<leader>gt', require('utils.term').git_client_toggle, { desc = 'Git TUI' })
-
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
