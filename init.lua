@@ -42,13 +42,6 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Some generic settings
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.cursorline = true
-vim.opt.shell = '/bin/zsh'
-vim.g.nightflyWinSeparator = 2
-
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
