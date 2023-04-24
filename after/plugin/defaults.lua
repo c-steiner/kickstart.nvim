@@ -1,4 +1,13 @@
 -- My keymapping adds and overrides
+-- Some generic settings
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.cursorline = true
+vim.opt.shell = '/bin/zsh'
+vim.opt.cp = false
+vim.cmd.colorscheme('nightfly')
+vim.g.nightflyWinSeparator = 2
+
 -- Telescope buffer search
 vim.keymap.set('n', '<leader>sb', require('telescope.builtin').buffers, { desc = '[S]earch [B]uffers' })
 
