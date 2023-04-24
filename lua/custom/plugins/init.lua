@@ -12,17 +12,6 @@ vim.g.nightflyWinSeparator = 2
 vim.opt.cp = false
 
 return {
-	-- Additional theme
-	{
-		"bluz71/vim-nightfly-colors",
-		name = "nightfly",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme 'nightfly'
-		end,
-	},
-
 	-- Additional syntax files
 	'ron-rs/ron.vim'
 }
