@@ -17,6 +17,10 @@ vim.cmd([[
 ]])
 
 -- toggleterm
+require('toggleterm').setup{
+	shell = '/bin/zsh'
+}
+
 vim.keymap.set ('n', '<leader>tt', ":ToggleTerm<cr>", {silent = true, noremap = true})
 
 -- gitui & toggleterm
