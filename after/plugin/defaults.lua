@@ -37,3 +37,12 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 -- gitui & toggleterm
 vim.keymap.set('n', '<leader>gt', require('utils.term').git_client_toggle, { desc = 'Git TUI' })
 
+
+-- nvim-cmp
+local cmp = require'cmp'
+
+cmp.setup({
+	window = {
+		completion = cmp.config.window.bordered()
+	}
+})
