@@ -44,6 +44,11 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Some generic settings
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.cursorline = true
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -72,10 +77,15 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
+  'idanarye/vim-merginal',
 
   -- Detect tabstop and shiftwidth automatically
   --'tpope/vim-sleuth',
 
+-- toggleterm
+  {
+    {'akinsho/toggleterm.nvim', version = "*", config = true}
+  },
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -160,6 +170,15 @@ require('lazy').setup({
   --     vim.cmd.colorscheme 'onedark'
   --   end,
   -- },
+  {
+    "bluz71/vim-nightfly-colors",
+    name = "nightfly",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'nightfly'
+    end,
+  },
 
   {
     -- Set lualine as statusline
@@ -172,6 +191,11 @@ require('lazy').setup({
         component_separators = '|',
         section_separators = '',
       },
+      sections = {
+        lualine_c = {
+          {'filename', path = 1}
+        }
+      }
     },
   },
 
